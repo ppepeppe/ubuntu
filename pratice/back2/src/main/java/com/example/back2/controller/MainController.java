@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 public class MainController {
     private final UserService userService;
-    @CrossOrigin(origins = "http://localhost:8080/")
+    @CrossOrigin(origins = {"http://localhost:8080/", "http://localhost:8082/"})
+
     @PostMapping("/hello")
     public ResponseEntity<?> getName(@RequestBody UserRequest userRequest){
         try {
